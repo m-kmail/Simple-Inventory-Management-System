@@ -27,6 +27,20 @@ namespace SIMS
             return true;
         }
 
+        public bool AddProduct(String name , int quantity , int price)
+        {
+            Product NewProduct = new(name,price,quantity);
+
+            if (!IsValid(ref NewProduct))
+                return false;
+
+            if (Find(ref NewProduct) >= 0)
+                return false;
+
+            products.Add(NewProduct);
+            return true;
+        }
+
         private bool IsValid(ref Product product) => 
             !String.IsNullOrEmpty(product.Name) && product.Quantity > 0 && product.Price >= 0;
 
