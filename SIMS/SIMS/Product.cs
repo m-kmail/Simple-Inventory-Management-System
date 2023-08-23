@@ -24,9 +24,9 @@ namespace SIMS
 
         public Product(Product other)
         {
-            _Name=other._Name;
-            _Price = other._Price;
-            _Quantity = other._Quantity;
+            _Name=other.Name;
+            _Price = other.Price;
+            _Quantity = other.Quantity;
         }
 
         public string Name
