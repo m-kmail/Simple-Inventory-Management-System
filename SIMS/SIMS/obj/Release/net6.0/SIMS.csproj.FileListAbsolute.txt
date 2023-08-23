@@ -1,0 +1,12 @@
+D:\_Foothil\SIMS\SIMS\SIMS\bin\Release\net6.0\SIMS.deps.json
+D:\_Foothil\SIMS\SIMS\SIMS\bin\Release\net6.0\SIMS.dll
+D:\_Foothil\SIMS\SIMS\SIMS\bin\Release\net6.0\SIMS.pdb
+D:\_Foothil\SIMS\SIMS\SIMS\obj\Release\net6.0\SIMS.csproj.AssemblyReference.cache
+D:\_Foothil\SIMS\SIMS\SIMS\obj\Release\net6.0\SIMS.GeneratedMSBuildEditorConfig.editorconfig
+D:\_Foothil\SIMS\SIMS\SIMS\obj\Release\net6.0\SIMS.AssemblyInfoInputs.cache
+D:\_Foothil\SIMS\SIMS\SIMS\obj\Release\net6.0\SIMS.AssemblyInfo.cs
+D:\_Foothil\SIMS\SIMS\SIMS\obj\Release\net6.0\SIMS.csproj.CoreCompileInputs.cache
+D:\_Foothil\SIMS\SIMS\SIMS\obj\Release\net6.0\SIMS.dll
+D:\_Foothil\SIMS\SIMS\SIMS\obj\Release\net6.0\refint\SIMS.dll
+D:\_Foothil\SIMS\SIMS\SIMS\obj\Release\net6.0\SIMS.pdb
+D:\_Foothil\SIMS\SIMS\SIMS\obj\Release\net6.0\ref\SIMS.dll

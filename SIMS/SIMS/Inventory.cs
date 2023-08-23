@@ -27,7 +27,7 @@ namespace SIMS
             return true;
         }
 
-        public bool AddProduct(String name , int quantity , int price)
+        public bool AddProduct(String name , int quantity , double price)
         {
             Product NewProduct = new(name,price,quantity);
 
