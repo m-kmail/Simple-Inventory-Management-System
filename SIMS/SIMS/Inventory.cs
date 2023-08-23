@@ -19,7 +19,7 @@ namespace SIMS
             if (!IsValid(ref product))
                 return false;
 
-            if (IsExisted(ref product))
+            if (Find(ref product) >= 0) 
                 return false;
 
             Product NewProduct = new(product);
@@ -30,15 +30,21 @@ namespace SIMS
         private bool IsValid(ref Product product) => 
             !String.IsNullOrEmpty(product.Name) && product.Quantity > 0 && product.Price >= 0;
 
-        private bool IsExisted(ref Product product)
+        private int Find(ref Product product)
         {
+            int indx = -1, cur = 0;
+
             foreach (var item in products)
             {
-                if(IsEqual(item,ref product)) 
-                    return true;
+                if(IsEqual(item,ref product))
+                {
+                    indx = cur;
+                    break;
+                }
+                cur++;
             }
 
-            return false;
+            return indx;
         }
 
         private bool IsEqual(Product p1,ref Product p2) => p1.Name == p2.Name && p1.Price == p2.Price;

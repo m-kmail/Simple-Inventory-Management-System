@@ -18,8 +18,7 @@ namespace SIMS
         {
             _Name = name;
             _Price = price;
-            _Quantity = quantity;
-            
+            _Quantity = quantity;   
         }
 
         public Product(Product other)
