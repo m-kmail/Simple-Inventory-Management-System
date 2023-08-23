@@ -63,6 +63,12 @@ namespace SIMS
             return true;
         }
 
+        public void ViewAllProducts()
+        {
+            foreach (var product in products)
+                Console.WriteLine(product.DisplayInfo());
+        }
+
         private bool IsValid(ref Product product) => 
             !String.IsNullOrEmpty(product.Name) && product.Quantity > 0 && product.Price >= 0;
 
