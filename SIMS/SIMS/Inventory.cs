@@ -91,7 +91,7 @@ namespace SIMS
 
             foreach (var item in products)
             {
-                if(IsEqual(item,ref product))
+                if(item.IsEqual(ref product))
                 {
                     indx = cur;
                     break;
@@ -118,7 +118,5 @@ namespace SIMS
 
             return indx;
         }
-
-        private bool IsEqual(Product p1,ref Product p2) => p1.Name == p2.Name;
     }
 }

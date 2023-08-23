@@ -66,6 +66,6 @@ namespace SIMS
         }
 
         public string DisplayInfo() => $"Name: {_Name}; Price: {_Price}; Quantity: {_Quantity};";
-
+        public bool IsEqual(ref Product other) => _Name == other.Name;
     }
 }
