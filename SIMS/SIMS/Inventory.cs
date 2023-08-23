@@ -12,7 +12,7 @@ namespace SIMS
         public Inventory() 
         {
             products = new List<Product>();
-        } 
+        }
 
         public bool AddProduct(Product product) 
         {
@@ -76,6 +76,12 @@ namespace SIMS
             products[idx].Price= price >=0 ? price : products[idx].Price;
         }
 
+        public string SearchForProduct(string name) 
+        {
+            int idx = Find(name);
+            return idx >=0 ? products[idx].DisplayInfo() : "The Product Does Not Exist";
+        } 
+        
         private bool IsValid(ref Product product) => 
             !String.IsNullOrEmpty(product.Name) && product.Quantity > 0 && product.Price >= 0;
 
