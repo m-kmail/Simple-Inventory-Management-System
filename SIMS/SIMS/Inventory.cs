@@ -69,6 +69,13 @@ namespace SIMS
                 Console.WriteLine(product.DisplayInfo());
         }
 
+        public void EditProduct(string name, int quantity, double price, int idx)
+        {
+            products[idx].Name= String.IsNullOrWhiteSpace(name) ? products[idx].Name : name;
+            products[idx].Quantity= quantity>0 ? quantity : products[idx].Quantity;
+            products[idx].Price= price >=0 ? price : products[idx].Price;
+        }
+
         private bool IsValid(ref Product product) => 
             !String.IsNullOrEmpty(product.Name) && product.Quantity > 0 && product.Price >= 0;
 
@@ -89,7 +96,7 @@ namespace SIMS
             return indx;
         }
 
-        private int Find(string name)
+        public int Find(string name)
         {
             int indx = -1, cur = 0;
 
