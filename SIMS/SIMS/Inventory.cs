@@ -52,11 +52,9 @@ namespace SIMS
             return true;
         }
 
-        public bool RemoveProduct(String name, int quantity, int price)
+        public bool RemoveProduct(String name)
         {
-            Product NewProduct = new(name, price, quantity);
-
-            int idx = Find(ref NewProduct);
+            int idx = Find(name);
 
             if (idx == -1)
                 return false;
@@ -85,6 +83,23 @@ namespace SIMS
             return indx;
         }
 
-        private bool IsEqual(Product p1,ref Product p2) => p1.Name == p2.Name && p1.Price == p2.Price;
+        private int Find(string name)
+        {
+            int indx = -1, cur = 0;
+
+            foreach (var item in products)
+            {
+                if (item.Name == name)
+                {
+                    indx = cur;
+                    break;
+                }
+                cur++;
+            }
+
+            return indx;
+        }
+
+        private bool IsEqual(Product p1,ref Product p2) => p1.Name == p2.Name;
     }
 }
