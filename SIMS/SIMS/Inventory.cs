@@ -41,6 +41,30 @@ namespace SIMS
             return true;
         }
 
+        public bool RemoveProduct(Product product) 
+        {
+            int idx = Find(ref product);
+
+            if (idx == -1)
+                return false;
+
+            products.RemoveAt(idx);
+            return true;
+        }
+
+        public bool RemoveProduct(String name, int quantity, int price)
+        {
+            Product NewProduct = new(name, price, quantity);
+
+            int idx = Find(ref NewProduct);
+
+            if (idx == -1)
+                return false;
+
+            products.RemoveAt(idx);
+            return true;
+        }
+
         private bool IsValid(ref Product product) => 
             !String.IsNullOrEmpty(product.Name) && product.Quantity > 0 && product.Price >= 0;
 
